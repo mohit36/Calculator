@@ -9,18 +9,21 @@ package cal;
  */
 import junit.framework.TestCase;
 
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.*;
 public class Caltest extends TestCase {
-  private calculating cl=null;
+//  private calculating cl;
    
-@Before
-   public void setup() {
-	 cl = new calculating();
-   }
-   @After
+//@Before
+//   public void setup() {
+//	 cl = new calculating();
+//   }
+//	
+   calculating cl= new calculating();
+   @Test
    public void testgetAdd() {
       double a = 10;
       double b = 20;
@@ -73,7 +76,7 @@ public class Caltest extends TestCase {
    @Test(expected = IllegalArgumentException.class)
    public void testgetDivzero() {
       double a = 20;
-      double b = 10;
+      double b = 0;
       cl.setDiv(a,b);
       cl.getDiv();
      
